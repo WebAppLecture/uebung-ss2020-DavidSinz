@@ -15,19 +15,19 @@ export class Calculator {
     setupNumPad() {
         let buttons = this.numPad.children;
         for (let i = 0; i < buttons.length; i++) {
-            buttons[i].addEventListener("click", this.onButtonClick.bind(this));
+            let symbol = buttons[i].innerText;
+            buttons[i].addEventListener("click", this.onButtonClick.bind(this, symbol));
         }
     }
 
     onButtonClick(symbol) {
-        let input = symbol.target.innerText;
-        if (!isNaN(input)) {
-            this.inputNum += input;
+        if (!isNaN(symbol)) {
+            this.inputNum += symbol;
             this.print(this.inputNum);
-        } else if (input === "AC") {
+        } else if (symbol === "AC") {
             this.clear();
         } else {
-            this.calculate(input);
+            this.calculate(symbol);
         }
     }
 
