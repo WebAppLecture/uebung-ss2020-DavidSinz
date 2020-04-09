@@ -2,6 +2,7 @@ import {MyMath} from "../01-MyMath/MyMath.js";
 
 export class Calculator {
 
+<<<<<<< HEAD
     constructor(numPad, outputCalculation, outputSolution) {
         this.numPad = numPad;
         this.outputCalculation = outputCalculation;
@@ -66,6 +67,29 @@ export class Calculator {
         this.operator = "";
         this.print('');
         this.printSolution('');
+=======
+    constructor(numpad, outputCalculation, outputSolution) {
+    }
+
+    setupNumPad() { 
+
+    }
+
+    onButtonClick(symbol) {
+    
+    }
+
+    print(string) {
+
+    }
+
+    printSolution(string) {
+
+    }
+
+    clear() {
+
+>>>>>>> a3e25763d7274e13cfa248d9d7ac869177532564
     }
 
 }
