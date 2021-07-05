@@ -3,6 +3,10 @@
  * 'class' legt fest dass es sich hierbei um eine Klasse handelt.
  * 'MyMath' ist der Name der Klasse.
  */
+<<<<<<< HEAD
+
+=======
+>>>>>>> a3e25763d7274e13cfa248d9d7ac869177532564
 export class MyMath {
 
     /**
@@ -15,6 +19,58 @@ export class MyMath {
         // 'this' referenziert den Kontext in dem die aktuelle Funktion aufgerufen wird. 
         // Hier referenziert es die Instanz der Klasse MyMath die wir gerade erstellen.
         // mit 'value * 1' erzwingen wir, dass value als number gelesen wird.
+<<<<<<< HEAD
+        this.value = value * 1;
+        if (isNaN(this.value)) {
+            this.value = 0;
+        }
+    }
+
+    add(value) {
+        this.value += value;
+        return this;
+    }
+
+    subtract(value) {
+        this.value -= value;
+        return this;
+    }
+
+    multiply(value) {
+        this.value *= value;
+        return this;
+    }
+
+    divide(value) {
+        if (value != 0) {
+            this.value /= value;
+        }
+        return this;
+    }
+
+    pow(value) {
+        if (value > 0) {
+            let num = this.value;
+            for (let i = 1; i < value; i++) {
+                this.value *= num;
+            }
+        } else if (value == 0) {
+            this.value = 1;
+        }
+        return this;
+    }
+
+    faculty() {
+        if (this.value % 1 === 0) {
+            let limit = this.value;
+            for (let i = 1; i < limit; i++) {
+                this.value *= i;
+            }
+        } else if (this.value === 0) {
+            this.value = 1;
+        }
+        return this;
+=======
         this.value = value * 1; 
     }
 
@@ -40,5 +96,6 @@ export class MyMath {
 
     faculty() {
 
+>>>>>>> a3e25763d7274e13cfa248d9d7ac869177532564
     }
 }
